@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="{% static 'css/estilo.css' %}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/icon/favicon/favicon.ico' %}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="{% static './css/estilo.css' %}" >
+   
     <title>Podoguia</title>
 </head>
 <body>
@@ -24,16 +27,17 @@
                 <li><a href="#podologos">Podologos</a></li>
                 <li><a href="#contatos">Contato</a></li>
                 <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#">Admin</a></li>
                 
             </ul>
         </nav>
     </header>
     <section class="first-section">
         <div class="conteudo-principal">
-            <h1>Podoguia</h1>
+            <img src="{% static "img/img/logo_podo.png" %}" width="400" heigth="400" alt="logotipo">
             <h2>Seus pés em boas mãos!</h2>
             <div class="btn">
-                <button class="reservar">Marque seu horario!</button>
+                <button class="reservar">Marque seu horario!</button><button class="reservar">Baixe nosso App</button>
                
             </div>
         </div>
@@ -42,31 +46,33 @@
         <div class="podologo">
             <h2>Podologos</h2>
             <h3>Confira todos nossos serviços. Agendamento pelo whatssap rápido e prático!</h3>
+            <p><a class="btn btn-success btn-md" href="{% url 'listarpodog' %}">Ver todos</a></p>
         </div>
 
     </section>
-    
     <section class="podologo">
-       
-            <div class="itens-podologo">
-                {% for podologo in podologos %} 
-                    <div class="itens-podologo">
-                        <img src="{{ podologo.avatar.url }} " alt="" />
-                        <div class="info">
-                            <h3>{{ podologo.nome }}</h3>
-                            <button class="pedir"><a href="{% url 'detalhar' podologo.id %}">Confira</a></button>
-                        </div>
-                    </div>   
-                {% endfor %}     
-            </div>
-            
-        
-    </section>
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-lg-4">
+                    
+                        {% for podologo in podologos %} 
+                            <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="{{ podologo.avatar.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    
+                            <h2>{{ podologo.nome }}</h2>
+                            <p>{{ podologo.info}}</p>
+                            <p><a class="btn btn-success btn-md" href="{% url 'detalhar' podologo.id %}">Ver detalhes</a></p>
+                        
+                    {% endfor %}
+                </div> <!-- /.col-lg-4 -->       
+            </div><!-- /.row -->
+        </div>
+    </section>  
+
     
     <section class="sobre-nos" id="sobrenos"> 
         <div class="main">
             <div class="contentsobre">
-                <h2>Sobre nós</h2>
+                <h4>Sobre nós</h4>
                     <p>O termo “podologia” tem sua origem na junção de duas palavras gregas: “podos”, que significa “pés”, e “logos”, que pode ser traduzido como “estudo” ou “ciência”. Portanto, a palavra “podologia” pode ser entendida como o estudo ou a ciência dos pés.
 
                         Essa denominação reflete a natureza da profissão, que se dedica ao estudo, diagnóstico, prevenção e tratamento das diferentes condições e doenças que afetam os pés. A podologia engloba uma ampla gama de conhecimentos e técnicas especializadas para cuidar da saúde e do bem-estar dos pés, abordando aspectos como a anatomia, fisiologia, biomecânica e patologias relacionadas aos membros inferiores.
@@ -96,5 +102,6 @@
     <footer>
         <h4>Desenvolvido por: Rosirene Cruz</h4>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

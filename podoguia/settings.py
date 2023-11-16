@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gpt4cg^fp-7tb+ii&fmnsqts00x0yzcqh!@%ek1*y&&scacp_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['RosieCruz13.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'podologo',
     'rest_framework',
+     "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -135,5 +136,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 10,
+    "PAGE_SIZE": 3,
 }

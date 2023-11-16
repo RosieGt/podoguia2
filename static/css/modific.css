@@ -1,0 +1,239 @@
+.container-fluid{
+    padding: 0;
+    
+   
+}
+.container-fluid {
+    margin: 35px;
+    
+}
+.container {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 40px;
+    display: block;
+    margin-top: 25px;
+   
+}
+body{
+    padding: 0;
+    margin: 0;
+}    
+/*navegação*/
+.navbar  {
+    border-bottom: 2px solid #0000cd;
+    margin-bottom: 20px;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav a.nav-link {
+    color: #0000ff;
+    letter-spacing: 2px;
+    box-shadow: 1px #00bfff;
+}
+/* dashboard */
+.dashboard {
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+.dashboard h4 {
+    font-size: 20px;
+}
+
+.dashboard span {
+    font-size: 40px;
+    display: block;
+    width: 100%;
+}
+
+.dashboard-box {
+    float: left;
+    background-color: #DFDFDF;
+    color: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 130px;
+    width: 32%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.dashboard-box:nth-child(2) {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+#dashboard-lastdays {
+    background-color: #3476e2;
+}
+
+#dashboard-done {
+    background-color: #13c43f;
+}
+
+#dashboard-doing {
+    background-color: #db1e47;
+}
+
+/* Botão de adicionar */
+
+
+#add-link {
+    text-decoration: none;
+}
+
+.add-div {
+    background-color: #3476e2;
+    cursor: pointer;
+    display: inline-block;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.fas.fa-plus {
+    color: #FFF;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/* Search */
+
+.fas .fa-search {
+    position: absolute;
+    top: 12px;
+    right: 26px;
+    cursor: pointer;
+}
+
+.search-div {
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Lista de pedidos */
+
+.list-div {
+    padding: 8px;
+}
+.list-div p{
+    font-size: 15px;
+    
+}
+.list-div h3 {
+    font-size: 20px;
+    
+}
+
+.task-list {
+    padding-left: 0;
+    text-decoration: none;
+}
+
+.task-item {
+    list-style: none;
+    font-size: 20px;
+    height: 50px;
+    padding: 0 15px;
+    padding-top: 10px;
+    border-bottom: 1px dashed #CCC;
+}
+
+.task-item.done {
+    background-color: #f1f5f4;
+}  
+
+.fas.fa-trash {
+    color: #db1e47;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+
+.fas.fa-edit {
+    color: #3476e2;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+
+.fa-check {
+    color: #ffd700;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+
+.done .fa-check {
+    color: #008000;
+}
+
+/*footer*/
+.rodape {
+    position: relative;
+    padding-top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0b0ec5;
+    height: 100px;
+    padding: 25;
+    border-top: 2px solid #0b0ec5;
+    text-align: center;    
+}
+    
+
+footer p {
+    color: #f5f5f5;
+    text-align: center;
+    top: 0;
+    position: relative;
+    
+}
+footer h3 {
+    color: #f5f5f5;
+    text-align: center;
+    top: 0;
+    position: relative;
+}  
+
+/* Paginação */
+.pagination {
+    margin-bottom: 20px;
+}
+
+.step-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Messages */
+
+ul.messages {
+    padding: 0;
+}
+
+ul.messages li {
+    list-style: none;
+
+}
