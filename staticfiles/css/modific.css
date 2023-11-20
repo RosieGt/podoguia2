@@ -4,7 +4,7 @@
    
 }
 .container-fluid {
-    margin: 35px;
+    margin: 50px;
     
 }
 .container {
@@ -110,7 +110,7 @@ body{
 /* Search */
 
 .fas .fa-search {
-    position: absolute;
+    position: relative;
     top: 12px;
     right: 26px;
     cursor: pointer;
@@ -126,7 +126,7 @@ body{
 /* Lista de pedidos */
 
 .list-div {
-    padding: 8px;
+    padding: 50px;
 }
 .list-div p{
     font-size: 15px;
@@ -148,92 +148,6 @@ body{
     height: 50px;
     padding: 0 15px;
     padding-top: 10px;
-    border-bottom: 1px dashed #CCC;
-}
-
-.task-item.done {
-    background-color: #f1f5f4;
-}  
-
-.fas.fa-trash {
-    color: #db1e47;
-    cursor: pointer;
-    margin: 5px;
-    font-size: 20px;
-    float: right;
-}
-
-.fas.fa-edit {
-    color: #3476e2;
-    cursor: pointer;
-    margin: 5px;
-    font-size: 20px;
-    float: right;
-}
-
-.fa-check {
-    color: #ffd700;
-    cursor: pointer;
-    margin: 5px;
-    font-size: 20px;
-    float: right;
-}
-
-.done .fa-check {
-    color: #008000;
-}
-
-/*footer*/
-.rodape {
-    position: relative;
-    padding-top: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #0b0ec5;
-    height: 100px;
-    padding: 25;
-    border-top: 2px solid #0b0ec5;
-    text-align: center;    
-}
-    
-
-footer p {
-    color: #f5f5f5;
-    text-align: center;
-    top: 0;
-    position: relative;
     
 }
-footer h3 {
-    color: #f5f5f5;
-    text-align: center;
-    top: 0;
-    position: relative;
-}  
 
-/* Paginação */
-.pagination {
-    margin-bottom: 20px;
-}
-
-.step-links {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.step-links .current {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* Messages */
-
-ul.messages {
-    padding: 0;
-}
-
-ul.messages li {
-    list-style: none;
-
-}

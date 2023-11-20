@@ -7,6 +7,21 @@
     text-decoration: none;
     font-family: Arial, sans-serif;
 }
+/* Paginação */
+.pagination {
+    margin-bottom: 20px;
+}
+
+.step-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
 html{
     width: 100vm;
@@ -18,7 +33,7 @@ html{
     width: 100vw;
     height: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: #ffffff;
     position: fixed;
@@ -140,7 +155,7 @@ html{
 }
 
 .sobre-nos {
-    background-color: #06ff97;
+    background-color: rgb(155, 155, 155);
     width: 100vw;
     padding-bottom: 5rem;
     color: black;

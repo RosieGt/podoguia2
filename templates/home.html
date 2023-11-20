@@ -14,15 +14,16 @@
    
     <title>Podoguia</title>
 </head>
+{% block nav %}
 <body>
     <header class="content">
         <div class="logo">
-            <img src="{% static "img/img/logo_podo.png" %}" alt="logotipo">
+            <img href="{% url 'home' %}" src="{% static "img/img/logo_podo.png" %}" alt="logotipo">
             <h3></h3>        
         </div>
         <nav>
             <ul class="list-menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#sobrenos">Sobre nós</a></li>
                 <li><a href="#podologos">Podologos</a></li>
                 <li><a href="#contatos">Contato</a></li>
@@ -32,6 +33,10 @@
             </ul>
         </nav>
     </header>
+{% endblock nav %}  
+
+
+{% block content %}
     <section class="first-section">
         <div class="conteudo-principal">
             <img src="{% static "img/img/logo_podo.png" %}" width="400" heigth="400" alt="logotipo">
@@ -42,50 +47,46 @@
             </div>
         </div>
     </section>
-    <section class="card"  id="podologos">
-        <div class="podologo">
-            <h2>Podologos</h2>
-            <h3>Confira todos nossos serviços. Agendamento pelo whatssap rápido e prático!</h3>
-            <p><a class="btn btn-success btn-md" href="{% url 'listarpodog' %}">Ver todos</a></p>
-        </div>
-
-    </section>
-    <section class="podologo">
-        <div class="container marketing">
-            <div class="row">
-                <div class="col-lg-4">
-                    
-                        {% for podologo in podologos %} 
-                            <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="{{ podologo.avatar.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    
-                            <h2>{{ podologo.nome }}</h2>
-                            <p>{{ podologo.info}}</p>
-                            <p><a class="btn btn-success btn-md" href="{% url 'detalhar' podologo.id %}">Ver detalhes</a></p>
-                        
-                    {% endfor %}
-                </div> <!-- /.col-lg-4 -->       
-            </div><!-- /.row -->
-        </div>
-    </section>  
-
     
-    <section class="sobre-nos" id="sobrenos"> 
-        <div class="main">
-            <div class="contentsobre">
-                <h4>Sobre nós</h4>
-                    <p>O termo “podologia” tem sua origem na junção de duas palavras gregas: “podos”, que significa “pés”, e “logos”, que pode ser traduzido como “estudo” ou “ciência”. Portanto, a palavra “podologia” pode ser entendida como o estudo ou a ciência dos pés.
-
-                        Essa denominação reflete a natureza da profissão, que se dedica ao estudo, diagnóstico, prevenção e tratamento das diferentes condições e doenças que afetam os pés. A podologia engloba uma ampla gama de conhecimentos e técnicas especializadas para cuidar da saúde e do bem-estar dos pés, abordando aspectos como a anatomia, fisiologia, biomecânica e patologias relacionadas aos membros inferiores.
+    <div class="container-fluid p-5 bg-success text-white text-center">
+      <h1>Confira a nossa lista de Podologos!</h1>
+      <a href="{% url 'listarpodog' %}" class="btn text-white" ><h1>Clique aqui.</h1></a>
+    
+      
+    
+        <section class="py-5">
+          <div class="container px-4 px-lg-5 my-5">
+              <div class="row gx-4 gx-lg-5 align-items-center">
+                  <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{% static "img/img/podologia2.jpg" %}" alt="..." /></div>
+                  <div class="col-md-6">
+                      <h1 class="display-6 fw-bolder">O que faz um Podólogo?</h1>
+                      
+                      <p class="display-6 lead">O podólogo é um profissional especializado em analisar e tratar os pés, visando prevenir lesões e oferecer orientações sobre os cuidados necessários para manter a saúde dessa região do corpo. Sua principal missão é garantir a saúde dos pés, proporcionando tratamentos eficazes e conhecimentos essenciais aos pacientes.
+    
+    
+    
+                        Seu trabalho começa com uma avaliação minuciosa dos pés de seus pacientes. Isso inclui examinar a estrutura física, avaliar a postura e observar quaisquer sinais de problemas, como calosidades, calos, unhas encravadas, verrugas plantares, entre outros.
                         
-                        É importante ressaltar que o termo “podologia” é utilizado para denominar essa área de atuação em diversos países ao redor do mundo, embora em alguns lugares possa ser conhecida por outros nomes, como “quiropodia” ou “podiatria”.</p>
-                    
-            </div>     
-            <div class="img-cozinha">
-                <img src="{% static './img/img/podologia2.jpg' %}" alt="podologia">
-            </div>
-        </div>    
-    </section>  
-
+                        
+                        
+                        Com base nessas observações, o podólogo pode recomendar tratamentos específicos. Isso pode envolver a remoção cuidadosa de calos e calosidades, muitas vezes utilizando técnicas especializadas e instrumentos esterilizados para garantir a segurança e o conforto do paciente.
+                        
+                        
+                        
+                        Outra parte importante da prática de um podólogo é o tratamento de unhas, especialmente em casos de unhas encravadas. Esse procedimento é delicado e requer habilidade para garantir que a unha seja tratada adequadamente, sem causar mais danos.</p>
+                                           
+                  </div>
+              </div>
+          </div>
+      </section>  
+      </div>
+    </div>
+  </div>
+   
+      
+      
+    
+ {% endblock %}
     <section class="contatos" id="contatos">
         <h3>Contatos</h3>
         <div class="contatos-secao">
@@ -102,6 +103,7 @@
     <footer>
         <h4>Desenvolvido por: Rosirene Cruz</h4>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
