@@ -13,7 +13,7 @@
                         <h1 class="display-4 fw-bolder">{{ podologo.nome }}</h1>
                         <p class="display-6 lead">{{ podologo.info }}</p>
                         <div class="d-flex">
-                            <a class="btn  btn-outline-success mt-auto btn-lg" href="{{ podologo.whatsapp }}">Agende</a>                                  
+                            <a class="btn  btn-outline-success mt-auto btn-lg" href="https://wa.me/{{ podologo.whatsapp }}" target="_blank">Agende</a>                                  
                             <button class="btn  flex-shrink-0" type="button"></button>
                            <a class="btn btn-outline-danger mt-auto btn-lg" href="{% url 'listarpodog' %}">Voltar</a>
                         </div>                        

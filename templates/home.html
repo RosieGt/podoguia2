@@ -18,7 +18,7 @@
 <body>
     <header class="content">
         <div class="logo">
-            <img href="{% url 'home' %}" src="{% static "img/img/logo_podo.png" %}" alt="logotipo">
+            <img href="{% url 'home' %}" src="{% static 'img/img/logo_podo.png' %}" alt="logotipo">
             <h3></h3>        
         </div>
         <nav>
@@ -28,7 +28,7 @@
                 <li><a href="#podologos">Podologos</a></li>
                 <li><a href="#contatos">Contato</a></li>
                 <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="#">Admin</a></li>
+                <li><a href="{% url 'admin:index' %}">Admin</a></li>
                 
             </ul>
         </nav>
@@ -39,12 +39,11 @@
 {% block content %}
     <section class="first-section">
         <div class="conteudo-principal">
-            <img src="{% static "img/img/logo_podo.png" %}" width="400" heigth="400" alt="logotipo">
+            <img src="{% static 'img/img/logo_podo.png' %}" width="400" heigth="400" alt="logotipo">
             <h2>Seus pés em boas mãos!</h2>
-            <div class="btn">
-                <button class="reservar">Baixe nosso App</button>
-               
-            </div>
+            
+                <a class="btn btn-success btn-lg" href="{%  static 'app-release.apk' %}" >Baixe nosso App</a>
+            
         </div>
     </section>
     
@@ -57,7 +56,7 @@
         <section class="py-5">
           <div class="container px-4 px-lg-5 my-5">
               <div class="row gx-4 gx-lg-5 align-items-center">
-                  <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{% static "img/img/podologia2.jpg" %}" alt="..." /></div>
+                  <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{% static 'img/img/podologia2.jpg' %}" alt="..." /></div>
                   <div class="col-md-6">
                       <h1 class="display-6 fw-bolder">O que faz um Podólogo?</h1>
                       
