@@ -58,6 +58,7 @@
                     <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="{{ podologo.avatar.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <h2>{{podologo.nome}}</h2>
                     <h3>{{ podologo.info}}</h3>
+                    <p><a class="btn btn-success btn-md" href="{% url 'detalhar' podologo.id %}">Ver detalhes</a></p>
                  </li>
             {% endfor %}
         </ul>

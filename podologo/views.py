@@ -6,10 +6,10 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework import filters
 
 # Create your views here.
-def index(request):
+def index_copy(request):
     podologos = Podologo.objects.all()
     
-    return render(request, "index.html", {'podologos': podologos})
+    return render(request, "index_copy.html", {'podologos': podologos})
 def home(request):
     podologos = Podologo.objects.all()
     

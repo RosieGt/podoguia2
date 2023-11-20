@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from podologo.views import index, home, listarpodog, cadastrar,  detalhar,  PodologoViewSet
+from podologo.views import index_copy, home, listarpodog, cadastrar,  detalhar,  PodologoViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
@@ -25,7 +25,7 @@ routers = routers.SimpleRouter()
 routers.register("podoguia", PodologoViewSet, basename="podoguia")
 
 urlpatterns = [
-    path('index/', index, name="index"),
+    path('index_copy/', index_copy, name="index_copy"),
     path('', home, name="home"),
     path('listarpodog/', listarpodog, name='listarpodog'),
     path('admin/', admin.site.urls),
