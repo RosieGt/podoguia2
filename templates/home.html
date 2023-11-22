@@ -16,23 +16,34 @@
 </head>
 {% block nav %}
 <body>
-    <header class="content">
-        <div class="logo">
-            <img href="{% url 'home' %}" src="{% static 'img/img/logo_podo.png' %}" alt="logotipo">
-            <h3></h3>        
-        </div>
-        <nav>
-            <ul class="list-menu">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#sobrenos">Sobre nós</a></li>
-                <li><a href="#podologos">Podologos</a></li>
-                <li><a href="#contatos">Contato</a></li>
-                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="{% url 'admin:index' %}">Admin</a></li>
-                
+    <nav class="navbar navbar-expand-lg bg-white d-flex justify-content-around">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img href="{% url 'home' %}" src="{% static 'img/img/logo_podo.png' %}"  alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+      
+           </a>
+          <div class="collapse navbar-collapse mx-auto" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="display-6 mx-auto nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="display-6 mx-auto nav-item">
+                <a class="nav-link" href="#sobrenos">Sobre nós</a>
+              </li>
+              <li class="display-6 mx-auto nav-item">
+                <a class="nav-link" href="{% url 'listarpodog' %}">Podologos</a>
+              </li>
+              <li class="display-6 mx-auto nav-item">
+                <a class="nav-link" href="#contatos">Contato</a>
+              </li>
+              <li class="display-6 mx-auto nav-item">
+                <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+              </li>
             </ul>
-        </nav>
-    </header>
+            
+          </div>
+        </div>
+      </nav>
 {% endblock nav %}  
 
 
@@ -47,7 +58,7 @@
         </div>
     </section>
     
-    <div class="container-fluid p-5 bg-success text-white text-center">
+    <div class="container-fluid p-5 bg-success text-white text-center" id="sobrenos">
       <h1>Confira a nossa lista de Podologos!</h1>
       <a href="{% url 'listarpodog' %}" class="btn text-white" ><h1>Clique aqui.</h1></a>
     

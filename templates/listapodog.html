@@ -4,17 +4,18 @@
 
 {% block nav %}
 
-<nav class="navbar bg-success">
-    <div class="container-fluid">
-        
-      <a class="navbar-brand text-white"  href="{% url 'home' %}"><h2>Podoguia</h2></a>
-      <form method="GET" class="d-flex" role="search">
-        <input class="form-control" type="text" id="search"  name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-        <button class="btn btn-primary" type="submit">Buscar</button>
-        <a href="{% url 'listarpodog' %}" class="btn btn-light">Limpar</a>
-      </form>
-    </div>
-  </nav>
+  <nav class="content navbar bg-success">
+      <div class="container-fluid">
+          
+        <a class="navbar-brand text-white"  href="{% url 'home' %}"><h2>Podoguia</h2></a>
+        <form method="GET" class="d-flex" role="search">
+          <input class="form-control" type="text" id="search"  name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
+          <button class="btn btn-primary" type="submit">Buscar</button>
+          <a href="{% url 'listarpodog' %}" class="btn btn-light">Limpar</a>
+        </form>
+      </div>
+    </nav>
+   
 
 {% endblock nav %}
 
