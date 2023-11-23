@@ -16,31 +16,35 @@
 </head>
 {% block nav %}
 <body>
-    <nav class="navbar navbar-expand-lg bg-white d-flex justify-content-around">
+   
+      <div style="margin-top: 2rem;"></div>
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img href="{% url 'home' %}" src="{% static 'img/img/logo_podo.png' %}"  alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            <img href="{% url 'home' %}" src="{% static 'img/img/logo_podo.png' %}"  alt="Logo" width="70" height="70" class="d-inline-block align-text-top img-home">
       
            </a>
-          <div class="collapse navbar-collapse mx-auto" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="display-6 mx-auto nav-item">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-home" style="width: 100%; display: flex; justify-content: center;">
+              <li class="display-6 nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
-              <li class="display-6 mx-auto nav-item">
-                <a class="nav-link" href="#sobrenos">Sobre nós</a>
+              <li class="display-6 nav-item">
+                <a class="nav-link" href="#sobrenos">Sobre</a>
               </li>
-              <li class="display-6 mx-auto nav-item">
+              <li class="display-6 nav-item">
                 <a class="nav-link" href="{% url 'listarpodog' %}">Podologos</a>
               </li>
-              <li class="display-6 mx-auto nav-item">
+              <li class="display-6 nav-item">
                 <a class="nav-link" href="#contatos">Contato</a>
               </li>
-              <li class="display-6 mx-auto nav-item">
-                <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+              <li class="display-6 nav-item">
+                <a class="nav-link" href="{% url 'admin:index' %}"><img href="{% url 'home' %}" src="{% static 'img/img/user.png' %}" title="acessar area do Admin" alt="Logo" width="30" height="30" class="d-inline-block align-text-top img-home"></a>
               </li>
             </ul>
-            
           </div>
         </div>
       </nav>
@@ -102,7 +106,7 @@
         <div class="contatos-secao">
             <div>
                 <i class="fas fa-phone"></i>
-                <span>(86) 98888-5555</span>
+                <span>(86) 98892-2164</span>
             </div>
             <div>
                 <i class="bi bi-instagram"></i>

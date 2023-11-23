@@ -1,21 +1,22 @@
 {% extends 'home.html' %}
- 
+{% load static %} 
 {% block title %}Lista podologo{% endblock title %}
 
 {% block nav %}
 
-  <nav class="content navbar bg-success">
-      <div class="container-fluid">
-          
-        <a class="navbar-brand text-white"  href="{% url 'home' %}"><h2>Podoguia</h2></a>
-        <form method="GET" class="d-flex" role="search">
-          <input class="form-control" type="text" id="search"  name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}">
-          <button class="btn btn-primary" type="submit">Buscar</button>
-          <a href="{% url 'listarpodog' %}" class="btn btn-light">Limpar</a>
-        </form>
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+      
+    <a class="navbar-brand" href="{% url 'home' %}"><img  src="{% static 'img/img/logo_podo.png' %}" alt="logotipo" heigth="70px" width="70px"></a>
+    <form method="GET" role="search">
+      <div class="d-flex justify-content-md-between mt-5">
+        <input class="form-control shadow-sm p-3 mb-5 bg-white rounded h2"  type="text" id="search"  name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}" style="margin-right: 1rem;">
+        <button class="btn btn-lg shadow-sm p-3 mb-5 bg-success" type="submit" style="margin-right: 1rem;">Buscar</button>
+        <a href="{% url 'listarpodog' %}" class="btn btn-lg gb-white shadow-sm p-3 mb-5 bg-white">Limpar</a>
       </div>
-    </nav>
-   
+    </form>
+  </div>
+</nav>
 
 {% endblock nav %}
 
@@ -47,7 +48,7 @@
                 </div>
             </div>
            <br>
-            <nav aria-label="...">
+            <nav aria-label="..." class="d-flex justify-content-center">
                 <ul class="pagination">
                   <li class="page-item disabled">
                     {% if podologo.has_previous %}
