@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gpt4cg^fp-7tb+ii&fmnsqts00x0yzcqh!@%ek1*y&&scacp_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wbmxgi.conteige.cloud', '177.131.142.30']
+ALLOWED_HOSTS = ['wbmxgi.conteige.cloud']
 
 
 # Application definition
