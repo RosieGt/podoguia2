@@ -73,8 +73,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'podoguia.wsgi.application'
 
 
- Database
- https://docs.djangoproject.com/en/4.2/ref/settings/databases
+ # Database
+ # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -84,8 +84,8 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+ Password validation
+ https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
