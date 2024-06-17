@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gpt4cg^fp-7tb+ii&fmnsqts00x0yzcqh!@%ek1*y&&scacp_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wbmxgi.conteige.cloud']
+ALLOWED_HOSTS = ['wbmxgi.conteige.cloud','podoguia.com','177.131.142.30']
 
 CSRF_TRUSTED_ORIGINS = ['https://wbmxgi.conteige.cloud']
 
