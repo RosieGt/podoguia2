@@ -10,7 +10,7 @@
     <a class="navbar-brand" href="{% url 'home' %}"><img  src="{% static 'img/img/logo_podo.png' %}" alt="logotipo" heigth="70px" width="70px"></a>
     <form method="GET" role="search">
       <div class="d-flex justify-content-md-between mt-5">
-        <input class="form-control shadow-sm p-3 mb-5 bg-white rounded h2"  type="text" id="search"  name="search" placeholder="Digite o nome para buscar..." value="{{ request.GET.search }}" style="margin-right: 1rem;">
+        <input class="form-control shadow-sm p-3 mb-5 bg-white rounded h2"  type="text" id="search"  name="search" placeholder="Digite o nome, cidade ou zona para encontrar..." value="{{ request.GET.search }}" style="margin-right: 1rem;">
         <button class="btn btn-lg shadow-sm p-3 mb-5 bg-success" type="submit" style="margin-right: 1rem;">Buscar</button>
         <a href="{% url 'listarpodog' %}" class="btn btn-lg gb-white shadow-sm p-3 mb-5 bg-white">Limpar</a>
       </div>
