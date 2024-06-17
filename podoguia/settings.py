@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['wbmxgi.conteige.cloud']
 
-CSRF_TRUSTED_ORIGINS = ['wbmxgi.conteige.cloud']
+CSRF_TRUSTED_ORIGINS = ['https://wbmxgi.conteige.cloud']
 
 
 # Application definition
