@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['wbmxgi.conteige.cloud','podoguia.com.br']
 
-CSRF_TRUSTED_ORIGINS = ['https://wbmxgi.conteige.cloud']
+CSRF_TRUSTED_ORIGINS = ['https://podoguia.com.br']
 
 
 # Application definition
