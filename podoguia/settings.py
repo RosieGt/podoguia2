@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gpt4cg^fp-7tb+ii&fmnsqts00x0yzcqh!@%ek1*y&&scacp_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wbmxgi.conteige.cloud','podoguia.com.br']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ['https://podoguia.com.br']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'podologo',
+    'bootstrap5',
     'rest_framework',
     
 ]

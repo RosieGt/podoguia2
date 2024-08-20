@@ -1,4 +1,5 @@
 {% extends 'home.html' %}
+
 {% load static %} 
 {% block title %}Lista podologo{% endblock title %}
 
@@ -7,12 +8,12 @@
 <nav class="navbar bg-light">
   <div class="container-fluid">
       
-    <a class="navbar-brand" href="{% url 'home' %}"><img  src="{% static 'img/img/logo_podo.png' %}" alt="logotipo" heigth="70px" width="70px"></a>
+    <a class="navbar-brand" href="{% url 'podo' %}"><img  src="{% static 'img/img/logo_podo.png' %}" alt="logotipo" heigth="70px" width="70px"></a>
     <form method="GET" role="search">
       <div class="d-flex justify-content-md-between mt-5">
-        <input class="form-control shadow-sm p-3 mb-5 bg-white rounded h2"  type="text" id="search"  name="search" placeholder="Digite o nome, cidade ou zona para encontrar..." value="{{ request.GET.search }}" style="margin-right: 1rem;">
-        <button class="btn btn-lg shadow-sm p-3 mb-5 bg-success" type="submit" style="margin-right: 1rem;">Buscar</button>
-        <a href="{% url 'listarpodog' %}" class="btn btn-lg gb-white shadow-sm p-3 mb-5 bg-white">Limpar</a>
+        <input class="form-control shadow-sm p-3 mb-5 bg-white rounded fs-3"  type="text" id="search"  name="search" placeholder="Digite o nome, cidade ou zona para encontrar..." value="{{ request.GET.search }}" style="margin-right: 1rem; color: #A8A8A8">
+        <button class="btn btn-lg  shadow-sm p-3 mb-5 bg-success text-light fs-2" type="submit" style="margin-right: 1rem;">Buscar</button>
+        <a href="{% url 'listarpodog' %}" class="btn btn-lg gb-white shadow-sm p-3 mb-5 fs-2">Limpar</a>
       </div>
     </form>
   </div>
@@ -24,57 +25,61 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container-fluid" style="background: linear-gradient(180deg, rgb(25, 135, 84) 0%,  rgb(57,135,157) 100%)" >
 
     
         
-    <div class="offset-1 col-10 list-div"> 
-    <div class="row">
-        <div class="col-lg-10">
-            <div class="card">
+    <div class="offset-1 col-10"> 
+    <div class="row d-flex justify-content-center">
+        <div class="col-gl-8  ">
+          <h1 class="text-light d-flex justify-content-center display-4 p-3">Nossas Podológas</h1>
+            <div class="card p-2 pl-8 ">
                 <div class="card-body">
-
+                  
                     {% for podologo in podologo %}
-                        <li class="task-item">
-                            <hr>
-                            <br>
-                            <img class="bd-placeholder-img rounded-circle" width="200" height="200" src="{{ podologo.avatar.url}}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <hr>  
+                    <div class="row ">
+                      <div class="col-5 p-5 d-flex justify-content-center">
+                          <img class="rounded-circle img-fluid" alt="Cinque Terre" src="{{ podologo.avatar.url}}" width="200px" height="200px">
+                      </div>
+                      <div class="col-7 p-5 ">    
                             <h2>{{podologo.nome}}</h2>
                             <h3>{{ podologo.info}}</h3>
-                            <p><a class="btn btn-success btn-gl" href="{% url 'detalhar' podologo.id %}">Ver detalhes</a></p>
-                        </li>
+                            <div class="d-flex justify-content-md-between ml-3 mt-3">
+                                <a class="btn  btn-outline-success mt-5 fs-3 col-6" href="https://wa.me/{{ podologo.whatsapp }}" target="_blank">Agende</a>                                  
+                              
+                                <a class="btn btn-outline-danger mt-5  fs-3 col-5" href="{% url 'podo' %}">Voltar</a>
+                            </div>
+                      </div>     
+                            
                     {% endfor %} 
                    
                 </div>
             </div>
-           <br>
-            <nav aria-label="..." class="d-flex justify-content-center">
-                <ul class="pagination">
-                  <li class="page-item disabled">
-                    {% if podologo.has_previous %}
-                    <a class="page-link" href="?page={{ podologo.previous_page_number }}">Anterior</a>
-                    {% endif %}
-                  </li>
-                  {% if podologo.paginator.num_pages %}
-                  <li class="page-item"><a class="page-link" href="#"><span class="current">
-                    {{ podologo.number }} de {{ podologo.paginator.num_pages }}
-                    </span></a></li>
-                  {% endif %}
-                
-
-                  {% if podologo.has_next %}  
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ podologo.next_page_number }}">Proximo</a>
-                  </li>
-                  {% endif %}
-                </ul>
-            </nav>    
+          </div>
         </div>
-    </div> 
-</div>
+      </div>          
+      <br>
+           
+          
+         <nav class="offset-1 col-10">     
+          <div class="container mt-1 d-flex justify-content-center">
+            <ul class="pagination">
+              {% if podologo.has_previous %}
+              <li class="page-item"><a class="page-link fs-2" href="?page={{ podologo.previous_page_number }}"><strong>anterior</strong> </a></li>
+              {% endif %}
+              {% if podologo.paginator.num_pages %}
+              <li class="page-item"><a class="page-link fs-2" href="#">{{ podologo.number }} de {{ podologo.paginator.num_pages }}</a></li>
+              {% endif %}
+              {% if podologo.has_next %}
+              <li class="page-item"><a class="page-link fs-2" href="?page={{ podologo.next_page_number }}">próximo</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </nav>  
         
-</div>
+
  
 {% endblock %}
             
-     
+

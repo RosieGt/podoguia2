@@ -1,0 +1,240 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Podologo, Podoguia, Podologia, Podologa, Podo, Pes, saúde, unha, encravada, micose."/>
+    <title>Podoguia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
+    <link href="{% static "css/stay.css" %}" rel="stylesheet" />
+</head>
+  <body>
+   
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 100px;">
+            <div class="container">
+                <a class="navbar-brand  text-success" href="#">
+                  <img src="{% static 'img/img/logo_podo.png' %}" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
+                  <strong > Podoguia.com</strong></a>
+            
+                
+            </div>
+        </nav>
+     <header class="container-fluid my-2"  style="background-image: linear-gradient(rgba(105,105,105,0.6), rgba(105,105,105,0.6)) , url({% static 'img/img/podologiap.jpg' %});  background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 pt-5">
+                    <h1 class="text-center text-md-start mt-5 text-light">Podoguia! Seus <span style="color: #84e298;">Pés</span> em boas mãos.</h1>
+                    <P class="lead text-center text-md-start mt-5 fs-4 text-light"><strong> Conheça uma lista de profissionais especializado em Podologia e agende uma podóloga mais perto de você na região de Teresina e cidades próximas.</strong></P>
+                <br>
+                <br>
+                <br>
+                
+                <div class="d-flex justify-content-around mt-5">
+                    <a class="btn btn-success btn-lg" href="#sobre">Saiba mais</a>
+                    <a class="btn btn-outline-light btn-lg" href="{% url 'listarpodog' %}">Agende seu horário</a>
+                   
+                </div>
+                
+                </div>
+                <div class="col-12 col-lg-6 p-5 opacity-75">
+                    <img src="{% static 'img/img/logo_podo.png' %}" alt="" width="550" height="550">
+                </div>
+
+            </div>
+        </div>    
+     </header> 
+  
+     <div class="container mb-5 mt-5 pt-5">
+        <div class="row">
+                    <div class="col-4">
+                        <div class="card border-0">
+                            <i class="bi bi-people-fill text-success ms-3" style="font-size: 2.5rem"></i>
+                            <div class="card-body">
+                            <h5 class="card-title">Sobre nós</h5>
+                            <p class="lead card-text">Podoguia.com é um serviço de guia de podologas que antendam  na região de Teresina. </p>
+                            <a href="#sobre" class="btn btn-success fs-5">Saiba mais</a>
+                            </div>
+                     
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card border-0">
+                            <i class="bi  bi-calendar-heart-fill text-success ms-3" style="font-size: 2.5rem"></i>
+                            <div class="card-body">
+                            <h5 class="card-title">Nossos serviços</h5>
+                            <p class=" lead card-text">Conheça os nossos serviços de prevenção e tratamentos dos cuidados e restauração da saúde dos pés.</p>
+                            <a href="#nossos_servicos" class="btn btn-success fs-5">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card border-0">
+                            <i class="bi bi-telephone-outbound-fill text-success ms-3" style="font-size: 2.5rem"></i>
+                            <div class="card-body">
+                            <h5 class="card-title">Lista de podólogas</h5>
+                            <p class=" lead card-text">Veja aqui um guia de profissionais especializadas em saúde dos pés e encontre uma mais próximo do seu domicilio.</p>
+                            <a href="{% url 'listarpodog' %}" class="btn btn-success fs-5">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+        </div>  
+           
+     </div> 
+     <!-- About Section-->
+     <section class="page-section  text-white mb-0" id="sobre" style="background: linear-gradient(180deg, rgb(25, 135, 84) 0%,  rgb(57,135,157) 100%)">
+        <div class="container-fluid" >
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Sobre nós</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="container">
+                <div class="col-lg-12 text-justific align-middle"><p class="lead fs-3">A ideia da criação do <strong> Podoguia.com.br</strong> consiste em prestar um serviço de guia das podologas que antendam  na região de Teresina 
+                    e cidades vizinhas. Procure na lista de podologas no campo de busca por cidade, bairro ou zona que encontrará uma podóloga mais próximo de 
+                    você prestando os melhores serviços no tratamento para os seus pés. </p></div>
+                
+            </div>
+            <!-- About Section Button-->
+            <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="{% url 'listarpodog' %}">
+                    <i class="fas fa-download me-2"></i>
+                    Guia de Podologas!
+                </a>
+            </div>
+           
+        </div>
+    </section>
+    <!-- Contact Section--> 
+    <div class="container mb-3 pt-3" id="nossos_servicos">
+        <div class="row">
+            <h1 class="text-center"><strong style="color: #39879d;">Nossos Serviços</strong></h1>
+                    <div class="col-4">
+                        <div class="card" style="border-style: solid; border-color: #39879d; border-width: medium;">
+                            <img src="{% static 'img/img/pe.png' %}" alt="pe" style="width: 90px">
+                            <div class="card-body">
+                                <h5 class="card-title">Unha Encravada</h5>
+                                <p class="card-text">Tratamento de unhas encravadas que já estão avermelhadas, doloridas ou com pus. Nossos podólogos avaliam e tratam o problema de forma personalizada, limpando o local, desencravando as unhas e fazendo o curativo. </p>
+                            <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="border-style: solid; border-color: #39879d; border-width: medium;">
+                            <img src="{% static 'img/img/pe.png' %}" alt="pe" style="width: 105px">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Micose na Unha</h5>
+                                <p class="card-text">É tratado com fototerapia. Tem ação regeneradora, anti-inflamatória, analgésica, Antifúngico e cicatrizante. O tratamento é indolor, não invasivo e consiste na incidência de luz na forma de soft laser na área a ser tratada.
+                                    <strong> Indicado para:</strong> micose de unha, fissuras, frieiras, conforto e bem-estar dos pés</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="border-style: solid; border-color: #39879d; border-width: medium;">
+                            <img src="{% static 'img/img/pe.png' %}" alt="pe" style="width: 85px">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Calos e Calosidades</h5>
+                                <p class=" card-text">Esse tratamento é técnica que evita as unhas encravem, retirada do excesso de pele que fica no canto das unhas. O procedimento termina com aplicação de creme hidratante que embeleza os pés.
+
+                                    Indicado para: pessoas em tratamento de unhas encravadas, que precisam limpar e proteger o local afetado com um curativo.</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>            
+        <div class="container mb-5 pt-3">
+            <div class="row">
+                    <div class="col-4">
+                        <div class="card" style="border-style: solid; border-color: #39879d; border-width: medium;">
+                            <img src="{% static 'img/img/pe.png' %}" alt="pe" style="width: 90px">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Curativo</h5>
+                                <p class="card-text">
+                                    Para unhas encravadas e infeccionadas que precisam de curativos.                                    
+                                <strong>Indicado para:</strong> pessoas em tratamento de unhas encravadas, que precisam limpar e proteger o local afetado com um curativo. </p>
+                                    <br>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="border-style: solid; border-color: #39879d; border-width: medium;">
+                            <img src="{% static 'img/img/pe.png' %}" alt="pe" style="width: 85px">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Órtese</h5>
+                                <p class="card-text">
+                                    Fixação de um dispositivo para tração mecânica da unha.  A implantação da órtese é indolor e exige manutenção.
+                                    
+                                    <strong>Indicado para:</strong> pessoas com unhas que encravam devido à curvatura acentuada das unhas. Temos órteses que ajustam a curvatura, evitando que encravem por este motivo.</p>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="border-style: solid; border-color: #39879d; border-width: medium;">
+                                <img src="{% static 'img/img/pe.png' %}" alt="pe" style="width: 90px">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Tratamento de Infecção</h5>
+                                    <p class="card-text">O processo infeccioso normalmente é decorrente de um corpo estranho no local infeccionado. Esse processo pode formar uma carne esponjosa, vermelhidão, produzir pus e dores.</p>
+                                <br>
+                                </div>
+                        </div>
+                    </div>    
+        </div>  
+
+     </div> 
+
+
+<!-- Footer-->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Localização</h4>
+                <p class="lead mb-0">
+                    Teresina - PI e Regiões
+                 </p>  
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Redes Sociais</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/podguia/"><i class="bi bi-instagram"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="bi bi-facebook"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://w.app/yaJt03"><i class="bi bi-whatsapp"></i></a>
+                
+            </div>
+            <!-- Footer About Text-->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">Podoguia.com</h4>
+                <h4 class=" mb-4">Seja uma associada!</h4>
+                <p>Faça parte da nossa rede de Podologas.</p>
+                <a class="btn btn-xl btn-outline-light" href="https://w.app/yaJt03">Veja como</a>
+            </div>
+            <div class="col-lg-4">
+                
+             </div>
+        </div>
+    </div>
+</footer>
+<!-- Copyright Section-->
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright &copy; Podoguia.com 2024 - Dev. @RosieCruz</small></div>
+</div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

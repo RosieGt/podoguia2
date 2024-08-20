@@ -10,10 +10,10 @@ def index(request):
     podologos = Podologo.objects.all()
     
     return render(request, "index.html", {'podologos': podologos})
-def home(request):
+def podo(request):
     podologos = Podologo.objects.all()
     
-    return render(request, "home.html",  {'podologos': podologos})
+    return render(request, "podo.html",  {'podologos': podologos})
 
 def detalhar(request, id):
     podologo = podologos = Podologo.objects.get(id=id)
